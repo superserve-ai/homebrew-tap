@@ -1,26 +1,26 @@
 class Superserve < Formula
   desc "CLI for deploying AI agents to sandboxed cloud containers"
   homepage "https://superserve.ai"
-  version "1.0.0"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.0/superserve-bun-darwin-arm64"
-      sha256 "5697576059064d76888d70a3cac2d104a0fc89f78838fccd94c1176a072a6544"
+      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.2/superserve-bun-darwin-arm64"
+      sha256 "fa1405f0ca36261f350f99df30804fd383d0719e6f391928f1aeec5914555d2d"
     else
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.0/superserve-bun-darwin-x64"
-      sha256 "749fd54e3f5550445256ef47ac402326dfc055d6776712ff606e494a9c16320d"
+      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.2/superserve-bun-darwin-x64"
+      sha256 "5ce4b9b2c017f5d59b5e6e33fe746d2c99102a34e5fdb6104352d2f91557d31c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.0/superserve-bun-linux-arm64"
-      sha256 "a9f3cf923e01477cd02728398945fe30e74b576ec3685796443bb71fdb97234e"
+      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.2/superserve-bun-linux-arm64"
+      sha256 "5cac912b7a62f833d4354454d6d8742bd71bf345e2f91dd63da396c64f91c6c0"
     else
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.0/superserve-bun-linux-x64"
-      sha256 "185d1856d2dee351d60b11c2c4e78635e1cde40b16670e450a2c0172fa23bb400cfe3ce51a218653f19a5252d77bfab5c5ff9cb0cbf7f1a2a98d2599ca9153dd"
+      url "https://github.com/superserve-ai/superserve/releases/download/v1.0.2/superserve-bun-linux-x64"
+      sha256 "ed3d8e33c2c604338ee9c5091629e9a028654b5ac7a3ed9261205583f7945789a901a692498e3fce31487dd730dff93163a868385146cdb43e07d0a20c5a43b6"
     end
   end
 
