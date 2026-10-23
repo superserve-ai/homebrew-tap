@@ -1,26 +1,26 @@
 class Superserve < Formula
-  desc "CLI for deploying AI agents to sandboxed cloud containers"
+  desc "CLI for Superserve sandboxes"
   homepage "https://superserve.ai"
-  version "1.1.0"
+  version "2.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.1.0/superserve-bun-darwin-arm64"
-      sha256 "3098fc3c83af3d055c2456f403e210b6a27005ca0379123b8d08d025e1eff106"
+      url "https://github.com/superserve-ai/superserve/releases/download/cli-v2.0.1/superserve-bun-darwin-arm64"
+      sha256 "faf7a4e07229735cc50ce66c5212689d7aaf107a850de9cf11b5612dd805d064"
     else
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.1.0/superserve-bun-darwin-x64"
-      sha256 "eb2c1d60dbdfb0e050e3177809747307e5bbdf41ea732b75419c1d0774a633a3"
+      url "https://github.com/superserve-ai/superserve/releases/download/cli-v2.0.1/superserve-bun-darwin-x64"
+      sha256 "5324b674d5b309fb1006f18ef772aba3458e4c3087ca5f11b2daccfdbdf5f9f4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.1.0/superserve-bun-linux-arm64"
-      sha256 "0f054e890d9ced75465ed73b08dc785a694ea95d4919c73e2bdad9630fb3c22c"
+      url "https://github.com/superserve-ai/superserve/releases/download/cli-v2.0.1/superserve-bun-linux-arm64"
+      sha256 "3fbb9806d244bb2d8017ac8e3cf6b34750f2bb138fe4dd023aa17b2b44d3febb"
     else
-      url "https://github.com/superserve-ai/superserve/releases/download/v1.1.0/superserve-bun-linux-x64"
-      sha256 "008cbd2ceb717f17dc6e0a5259bfe203ce485461f827022ee84195e4e7435cd5927b1882522d11457e7cb0d9a3273dad5d41a6a4037276e9d221088e105d82c2"
+      url "https://github.com/superserve-ai/superserve/releases/download/cli-v2.0.1/superserve-bun-linux-x64"
+      sha256 "2aff3f08240af760553a1930b8b80ce70f7363af4af14a3195b4cd64b328a702"
     end
   end
 
@@ -29,6 +29,6 @@ class Superserve < Formula
   end
 
   test do
-    assert_match "superserve", shell_output("#{bin}/superserve --help")
+    assert_match version.to_s, shell_output("#{bin}/superserve --version")
   end
 end
